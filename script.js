@@ -66,3 +66,10 @@ tsParticles.load("tsparticles", {
   },
   background: { color: "#000" }
 });
+// Navbar toggle for mobile
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
