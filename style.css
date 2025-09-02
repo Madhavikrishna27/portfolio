@@ -706,28 +706,27 @@ nav {
 /* ============================= */
 /* Modal Fix - Center & Responsive */
 /* ============================= */
+/* Hide all modals by default */
 .modal {
-  display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: center; /* horizontal center */
+  display: none;   /* ensures they are hidden */
   position: fixed;
-  top: 0;
+  z-index: 1000;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* dark overlay */
-  z-index: 9999;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* dark background overlay */
 }
 
+/* Modal content stays centered */
 .modal-content {
   background: #fff;
-  width: 80%;
-  max-width: 700px;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 10px;
+  margin: 10% auto;
   padding: 20px;
-  position: relative;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
 }
 
 /* Make modal more usable on small screens */
