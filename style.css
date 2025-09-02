@@ -652,9 +652,13 @@ nav {
   background: #cc003d;    /* darker red on hover */
 }
 
-/* Remove bullets from modal lists */
+/* Remove bullets from modal lists everywhere */
 .modal-content ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.modal-content li {
+  margin-bottom: 8px; /* optional: adds spacing between list items */
 }
