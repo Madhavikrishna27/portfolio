@@ -23,3 +23,46 @@ window.onclick = function(event) {
     }
   });
 };
+/* ---- Background Animation with tsParticles----- */
+tsParticles.load("tsparticles", {
+  particles: {
+    number: {
+      value: 120,
+      density: { enable: true, value_area: 800 }
+    },
+    color: { value: ["#ff004f", "#ffffff", "#ff80bf"] },
+    shape: { type: "circle" },
+    opacity: {
+      value: 0.5,
+      random: true
+    },
+    size: {
+      value: 3,
+      random: true
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      outModes: { default: "out" }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ff004f",
+      opacity: 0.4,
+      width: 1
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "repulse" },
+      onClick: { enable: true, mode: "push" }
+    },
+    modes: {
+      repulse: { distance: 100 },
+      push: { particles_nb: 4 }
+    }
+  },
+  background: { color: "#000" }
+});
