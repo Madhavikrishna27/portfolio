@@ -620,3 +620,73 @@ nav {
     display: flex;
   }
 }
+
+/* About Section Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+.about-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.about-text {
+  flex: 2;
+}
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* ========================= */
+/* Responsive Adjustments    */
+/* ========================= */
+
+/* Make About Me text scale better on smaller screens */
+@media (max-width: 768px) {
+  .about-text p {
+    font-size: 14px;     /* smaller text on tablets/phones */
+    line-height: 1.5;    /* keep spacing readable */
+    text-align: justify; /* nicer alignment */
+    padding: 0 10px;     /* add some side padding */
+  }
+
+  .about-text h2 {
+    font-size: 20px;     /* smaller heading */
+  }
+}
+
+/* Even smaller screens (like phones under 480px) */
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .about-text h2 {
+    font-size: 18px;
+  }
+}
+
+/* Make About Me image responsive */
+.about-image img {
+  max-width: 100%;   /* scale with screen */
+  height: auto;      /* maintain aspect ratio */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;    /* center the image */
+}
