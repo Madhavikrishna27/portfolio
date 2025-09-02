@@ -651,3 +651,10 @@ nav {
 .close:hover {
   background: #cc003d;    /* darker red on hover */
 }
+
+/* Remove bullets from modal lists */
+.modal-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
