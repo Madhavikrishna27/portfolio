@@ -1,4 +1,5 @@
 // Function to open a modal by project ID
+// Open modal by ID
 function openModal(projectId) {
   const modal = document.getElementById(projectId);
   if (modal) {
@@ -6,7 +7,7 @@ function openModal(projectId) {
   }
 }
 
-// Function to close a modal by project ID
+// close modal by ID
 function closeModal(projectId) {
   const modal = document.getElementById(projectId);
   if (modal) {
@@ -23,6 +24,7 @@ window.onclick = function(event) {
     }
   });
 };
+
 /* ---- Background Animation with tsParticles----- */
 tsParticles.load("tsparticles", {
   particles: {
@@ -54,8 +56,8 @@ tsParticles.load("tsparticles", {
       width: 1
     }
   },
-  interactivity: {
-    events: {
+    interactivity: {
+      events: {
       onHover: { enable: true, mode: "repulse" },
       onClick: { enable: true, mode: "push" }
     },

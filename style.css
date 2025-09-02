@@ -272,7 +272,7 @@ nav {
   border-radius: 10px;
   padding: 30px;
   width: 600px;
-  min-height: 180px;
+  min-height: 200px;
   font-size: 25px;
   transition: 0.3s ease;
 }
@@ -349,85 +349,6 @@ nav {
 .project-info p {
   margin: 5px 0 0;
   font-size: 20px;
-}
-
-
-/* Modal Background */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto;
-  background-color: rgba(0,0,0,0.85);
-  backdrop-filter: blur(4px); 
-}
-
-/* Modal Content */
-.modal-content {
-  background: #fff;
-  margin: 5% auto;
-  padding: 80px;
-  width: 400%;
-  max-width: 1000px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  color: #000;
-  font-size: 25px;
-  line-height: 1.8;
-  text-align: left;
-}
-
-/* Headings */
-.modal-content h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.modal-content h3 {
-  margin-top: 20px;
-  font-size: 30px;
-  color: #333;
-}
-
-/* Bullet points */
-.modal-content ul {
-  margin: 15px 0 20px 20px;
-}
-
-.modal-content ul li {
-  margin-bottom: 10px;
-}
-
-/* Skills row */
-.modal-skills {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.modal-skills img {
-  width: 40px;
-  height: 40px;
-}
-
-/* Close Button */
-.close {
-  color: #1a1a1a;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #fff;
 }
 
 /* Education Section */
@@ -651,110 +572,82 @@ nav {
   line-height: 1.6;
 }
 
-
-/* ========================= */
-/* Responsive Adjustments    */
-/* ========================= */
-
-/* Make About Me text scale better on smaller screens */
-@media (max-width: 768px) {
-  .about-text p {
-    font-size: 14px;     /* smaller text on tablets/phones */
-    line-height: 1.5;    /* keep spacing readable */
-    text-align: justify; /* nicer alignment */
-    padding: 0 10px;     /* add some side padding */
-  }
-
-  .about-text h2 {
-    font-size: 20px;     /* smaller heading */
-  }
-}
-
-/* Even smaller screens (like phones under 480px) */
-@media (max-width: 480px) {
-  .about-text p {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-
-  .about-text h2 {
-    font-size: 18px;
-  }
-}
-
-/* Make About Me image responsive */
-.about-image img {
-  max-width: 100%;   /* scale with screen */
-  height: auto;      /* maintain aspect ratio */
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;    /* center the image */
-}
-/* Responsive Modals */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 90%;          /* Make it fit smaller screens */
-    height: auto;        /* Allow height to adjust */
-    margin: 20px auto;   /* Center with spacing */
-    padding: 15px;       /* Add breathing room */
-    font-size: 14px;     /* Slightly smaller text */
-    overflow-y: auto;    /* Scroll inside if content is too long */
-    max-height: 80vh;    /* Prevent covering entire screen */
-    border-radius: 10px; /* Softer corners */
-  }
-}
 /* ============================= */
-/* Modal Fix - Center & Responsive */
+/* Modal Styling (Final Clean)   */
 /* ============================= */
-/* Hide all modals by default */
+
+/* Modal Background */
 .modal {
-  display: none;   /* ensures they are hidden */
-  position: fixed;
-  z-index: 1000;
+  display: none;              /* Hidden by default */
+  position: fixed;            /* Stay fixed on screen */
+  z-index: 1000;              /* On top of everything else */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7); /* dark background overlay */
+  overflow: auto;             /* Allow scrolling if content is long */
+  background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  backdrop-filter: blur(4px); /* Nice blur background */
 }
 
-/* Modal content stays centered */
+/* Modal Content */
 .modal-content {
   background: #fff;
-  margin: 10% auto;
+  margin: 5% auto;            /* Center vertically & horizontally */
   padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
+  width: 80%;                 /* Responsive width */
+  max-width: 600px;           /* Limit size on large screens */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
 }
 
-/* Make modal more usable on small screens */
+/* Close Button */
+.close {
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Responsive Fix for Mobile */
 @media (max-width: 768px) {
   .modal-content {
     width: 90%;
-    max-height: 80vh;
+    max-height: 80vh;   /* Prevent from covering entire screen */
     font-size: 14px;
   }
 }
-
-/* Keep close button fixed inside */
-.modal .close {
+/* Close Button */
+.close {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  background: #ff004f;    /* red circle */
+  color: #fff;            /* white "×" */
+  border-radius: 50%;     /* makes it circular */
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;      /* centers "×" vertically */
+  text-align: center;     /* centers "×" horizontally */
   cursor: pointer;
+  z-index: 2000;
+  transition: background 0.3s ease;
 }
-/* Force all modals hidden by default */
-.modal {
-  display: none !important;  /* <-- force it hidden */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7);
+
+.close:hover {
+  background: #cc003d;    /* darker red on hover */
 }
