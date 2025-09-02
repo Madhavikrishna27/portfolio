@@ -690,3 +690,60 @@ nav {
   display: block;
   margin: 0 auto;    /* center the image */
 }
+/* Responsive Modals */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;          /* Make it fit smaller screens */
+    height: auto;        /* Allow height to adjust */
+    margin: 20px auto;   /* Center with spacing */
+    padding: 15px;       /* Add breathing room */
+    font-size: 14px;     /* Slightly smaller text */
+    overflow-y: auto;    /* Scroll inside if content is too long */
+    max-height: 80vh;    /* Prevent covering entire screen */
+    border-radius: 10px; /* Softer corners */
+  }
+}
+/* ============================= */
+/* Modal Fix - Center & Responsive */
+/* ============================= */
+.modal {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  width: 80%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Make modal more usable on small screens */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-height: 80vh;
+    font-size: 14px;
+  }
+}
+
+/* Keep close button fixed inside */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
